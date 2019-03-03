@@ -1,0 +1,35 @@
+[
+  {
+    "type": "backgroundColor",
+    "values": [
+      "black", 
+      "white",
+      "green",
+      "blue"
+    ]
+  },
+  {
+    "type":"pattern",
+    "values": [
+      "calico",
+      "cream", 
+      "sand"
+    ]
+  },
+  {
+    "type": "legs",
+    "values": [
+      "stubby",
+      "normal",
+      "stumper",
+      "micro"
+    ]
+  },
+  {
+    "type": "collar",
+    "values": [
+      "none",
+      "black"
+    ]
+  }  
+]
