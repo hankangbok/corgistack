@@ -1,0 +1,23 @@
+{
+  "name": "corgistack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hankangbok/corgistack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankangbok/corgistack/issues"
+  },
+  "homepage": "https://github.com/hankangbok/corgistack#readme",
+  "devDependencies": {
+    "foreman": "^3.0.1"
+  }
+}

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const GenerationEngine = require('./generation/newGeneration.js'); 
 const corgiRouter = require('./api/corgi');
 const generationRouter = require('./api/generation');
@@ -8,9 +9,9 @@ const engine = new GenerationEngine();
 
 console.log(engine);
 app.locals.engine = engine;
+app.use(cors({origin:'http://localhost:3001'}));
 app.use('/corgi', corgiRouter);
 app.use('/generation', generationRouter);
-
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   res.status(statusCode).json({

@@ -1,0 +1,2 @@
+backend: nodemon ./backend/bin/server
+frontend: react-scripts 
