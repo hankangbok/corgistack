@@ -5,11 +5,16 @@ const MINIMUM_DELAY = 3000;
 
 class Generation extends Component {
   state = { generation: DEFAULT_GENERATION };
-  
+  timer = null;
   componentDidMount() {
     this.fetchNextGeneration();
   }
-  
+
+  componentWillUnmount() {
+    // Clearing things up so that we're not looping when we focus away from the page
+    clearTimeout(this.timer);
+  } 
+
   fetchGeneration = () => {
     fetch('http://localhost:3000/generation')
       .then((response=> response.json()))
@@ -30,7 +35,7 @@ class Generation extends Component {
     if (delay <MINIMUM_DELAY) {
       delay = MINIMUM_DELAY;
     }  
-    setTimeout(() => this.fetchNextGeneration(), delay);
+    this.timer = setTimeout(() => this.fetchNextGeneration(), delay);
   };
 
   render() {

@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/hankangbok/corgistack/issues"
   },
+  "styles": "./frontend/src/my.css",
   "homepage": "https://github.com/hankangbok/corgistack#readme",
   "devDependencies": {
     "foreman": "^3.0.1"
